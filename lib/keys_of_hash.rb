@@ -1,10 +1,11 @@
 class Hash
+
   def keys_of(*arguments)
     matches = []
-    arguments.each do |this|
-      self.each do |k,v|
-        if this == value
-        matches << k
+    arguments.each do |arg|
+      self.each do |key, value|      
+        if arg == value
+          matches << key
         end
       end
     end
